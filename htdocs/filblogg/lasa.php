@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Min enkla Blog</title>
     <link rel="stylesheet" href="superhero.epic.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Min enkla blogg</h1>
-<nav>
-        <ul>
-            <li><a href="index.php">Hem</a></li>
-            <li><a href="skriva.php">Skriva inlägg</a></li>
-            <li><a href="lasa.php">Läsa inlägg</a></li>
-        </ul>
-    </nav>
-<?php
-/* öppna textfilen och läas inehållet och skriva ut det. */
+    <?php include "header.inc" ?>  
+    <main>
+    <?php
+        /* öppna textfilen och läas inehållet och skriva ut det. */
 
-    $allaRader = file("inlaggen.txt");
-echo "<p>";
-    foreach ($allaRader as $rad) {
+        $allaRader = file("inlaggen.txt");
+
+        foreach ($allaRader as $rad) {
         echo $rad . "<br>";
-}
-echo "</p>";
-?>
+        }
+
+    ?>
+    </main>
+    <footer>
+    
+    </footer>
+    </div>
+
 </body>
 </html>
