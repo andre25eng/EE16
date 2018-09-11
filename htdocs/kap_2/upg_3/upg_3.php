@@ -9,8 +9,8 @@
 <body>
     <form action="upg_3b.php" method="post">
         <label for="">Temperature in Celsius</label><input type="text" name="temp"><br>
-        <input type="radio" name="omvandla">C° till F°<br>
-        <input type="radio" name="omvandla">F° till C° <br>
+        <input type="radio" name="omvandla" value="f2c">F° till C°<br>
+        <input type="radio" name="omvandla" value="c2f">C° till F°<br>
         <button>Convert</button>
     </form>
     <?php ?>
