@@ -9,18 +9,23 @@
 <body>
     <?php 
         $url = $_POST["url"];
-        $sordet = $_POST["ordet"];
+        $sordet = $_POST["sordet"];
+        $nordet = $_POST["nordet"];
 
-        $innehall = file_get_contents($url);
-        $antal = 0;
-        $pos = 1;
+        $gamlaSidan = file_get_contents($url);
+        $nyaSida = "";
+        $antal = 1;
+        $start = 0;
+        $slut = 1;
 
-        while ($pos != false) {
-            $pos = stripos($innehall, $sordet, $pos + 1);
-            echo "<p>$pos</p>";
+        while ($slut != false) {
+            $slut = stripos($gamlaSidan, $sordet, $start + 1);
+            $nyaSida = $nyaSida . substr($gamlaSidan, $start, $slut) . $nordet;
             $antal++;
+            $start = $slut + strlen($sordet);
         }
-        $antal--;
+        
+        file_put_contents("test.html", $nyaSida);
 
         echo "<p>$sordet hittades $antal gånger på sidan.</p>";
     ?>

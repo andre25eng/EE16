@@ -11,8 +11,10 @@
         <label for="ruta">Url: </label>
         <input type="text" name="url"><br>
         <label for="">Ordet: </label>
-        <input type="text" name="ordet"><br>
-        <button>Hitta ord</button>
+        <input type="text" name="sordet"><br>
+        <label for="">Bytes: </label>
+        <input type="text" name="nordet"><br>
+        <button>Byt ord</button>
     </form>
 </body>
 </html>
