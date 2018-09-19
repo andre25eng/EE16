@@ -13,21 +13,10 @@
         $nordet = $_POST["nordet"];
 
         $gamlaSidan = file_get_contents($url);
-        $nyaSida = "";
-        $antal = 1;
-        $start = 0;
-        $slut = 1;
 
-        while ($slut != false) {
-            $slut = stripos($gamlaSidan, $sordet, $start + 1);
-            $nyaSida = $nyaSida . substr($gamlaSidan, $start, $slut) . $nordet;
-            $antal++;
-            $start = $slut + strlen($sordet);
-        }
+        $nyaSida = str_replace($sordet, $nordet, $gamlaSidan);
         
         file_put_contents("test.html", $nyaSida);
-
-        echo "<p>$sordet hittades $antal gånger på sidan.</p>";
     ?>
 </body>
 </html>
