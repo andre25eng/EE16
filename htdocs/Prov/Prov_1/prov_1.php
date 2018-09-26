@@ -8,7 +8,8 @@
 </head>
 <body>
     <?php 
-
+    $fel = 0;
+    
     /* Tar emot data från formulär */
     if (isset($_POST["namn1"]) && isset($_POST["lon1"]) && isset($_POST["skatt"])){
 
@@ -16,7 +17,7 @@
         $lon1 = $_POST["lon1"];
         $lon2 = 0;
         $skatt = $_POST["skatt"];
-        $fel = 0;
+        
 
 
         /* Fel skökning */
