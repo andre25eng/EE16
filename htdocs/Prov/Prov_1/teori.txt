@@ -1,0 +1,11 @@
+Ge exempel på en webbtjänst som bygger på PHP.
+
+Inloggnings databser, olika slags beräknings tjänster.
+
+Beskriv skillnaden mellan statiska webbsidor och dynamiska webbsidor.
+
+Statiska webbsidor ser alltid ut på ett sett så länge man inte manuellt uppdaterar något. Medans dynsamiska webbsidor anpasar sig och ändrar saker beroende på ifylld information till exempel.
+
+Beskriv vad som krävs för att en webbapplikation byggd på PHP skall fungera: hårdvara och mjukvara.
+
+Om du vill ha applikationen lokalt så behöver du ett program sok XAMPP för att php ska kunna fungera.

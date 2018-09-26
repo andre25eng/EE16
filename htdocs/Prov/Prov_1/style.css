@@ -1,0 +1,8 @@
+body {
+    background-color: aqua;
+}
+
+label {
+    width: 100px;
+    display: inline-block;
+}
