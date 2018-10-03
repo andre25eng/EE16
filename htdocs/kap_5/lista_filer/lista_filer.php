@@ -8,15 +8,22 @@
 </head>
 <body>
     <?php 
-    $sokvag = "C:\Users\andre\Pictures\WP";
-
+    $sokvag = "./bilder";
     $filer = scandir($sokvag);
+
+    echo "<div clas=\"kontaier\">\n";
+    echo "<h1>Bildgaleleri</h1>\n";
 
     foreach ($filer as $fil) {
         if ($fil != "." && $fil != "..") {
-        echo "<p>$fil</p>";
+        echo "<div class=\"ros vanster\">\n
+            <img class=\"ram\"src=\"./bilder/$fil\" alt=\"stuff\">\n
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>\n
+            <hr>\n
+            </div>\n";
         }
     }
+    echo "</div>";
     ?>
 </body>
 </html>
