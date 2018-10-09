@@ -1,3 +1,12 @@
+<?php
+/*
+*Läser innehållet av mappen bilder och skapar ett bildgaleri av befintliga filer.
+* PHP version 7
+* @category   Bildgalleri
+* @author     André Englund
+* @license    PHP CC
+*/
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -11,13 +20,13 @@
     $sokvag = "./bilder";
     $filer = scandir($sokvag);
 
-    echo "<div clas=\"kontaier\">\n";
+    echo "<div clas=\"kontainer\">\n";
     echo "<h1>Bildgaleleri</h1>\n";
 
     foreach ($filer as $fil) {
         if ($fil != "." && $fil != "..") {
-        echo "<div class=\"ros vanster\">\n
-            <img class=\"ram\"src=\"./bilder/$fil\" alt=\"stuff\">\n
+        echo "<div class=\"ros\">\n
+            <img class=\"ram vanster\"src=\"./bilder/$fil\" alt=\"stuff\">\n
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>\n
             <hr>\n
             </div>\n";
