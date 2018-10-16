@@ -12,12 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.0/dist/mini-default.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer">
-        <h1>Alla varor</h1>
+        <header>
+            <h1>Alla varor</h1>
+            <div id="korgen"></div>
+        </header>
         <main>
         <?php
         /* öppna textfilen och läas inehållet och skriva ut det. */
@@ -29,19 +31,31 @@
 
         $delar = explode("¤", $rad);
 
-        echo "<div class=\"vara\">\n
-              <img src=\"./varor/$delar[2]\" alt=\"$delar[0]\">\n
-              <p>$delar[0]</p>\n
-              <p>$delar[1] kr</p>\n
-              <hr>\n
-              </div>\n";
+        echo "
+        <div class=\"vara\">\n
+        <img src=\"./varor/$delar[2]\" alt=\"$delar[0]\">\n
+        <p>$delar[0]</p>\n
+        <p>Styckpris: <span id=\"pris\">$delar[1]</span> kr</p>\n
+        <p>Summa: <span id=\"summa\">$delar[1]</span> kr</p>\n
+            <table>\n
+                <tr>\n
+                    <td id=\"antal\" rowspan=\"2\">1</td>\n
+                    <td id=\"plus\">+</td>
+                    <td id=\"kop\" rowspan=\"2\">köp</td>\n
+                </tr>\n
+                <tr>\n
+                    <td id=\"minus\">-</td>\n
+                </tr>\n
+            </table>\n
+        </div>\n";
         }
 
         ?>
         </main>
         <footer>
-    
+                
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
