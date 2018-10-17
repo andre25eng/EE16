@@ -18,7 +18,10 @@
     <div class="kontainer">
         <header>
             <h1>Alla varor</h1>
-            <div id="korgen"></div>
+            <div id="korglook">
+                <span id="antalVaror">0</span>
+                <span id="korgen">0</span> kr
+            </div>
         </header>
         <main>
         <?php
@@ -37,16 +40,16 @@
         <p>$delar[0]</p>\n
         <p>Styckpris: <span id=\"pris\">$delar[1]</span> kr</p>\n
         <p>Summa: <span id=\"summa\">$delar[1]</span> kr</p>\n
-            <table>\n
-                <tr>\n
-                    <td id=\"antal\" rowspan=\"2\">1</td>\n
+            <table>
+                <tr>
+                    <td id=\"antal\" rowspan=\"2\">1</td>
                     <td id=\"plus\">+</td>
-                    <td id=\"kop\" rowspan=\"2\">köp</td>\n
-                </tr>\n
-                <tr>\n
-                    <td id=\"minus\">-</td>\n
-                </tr>\n
-            </table>\n
+                    <td id=\"kop\" rowspan=\"2\">köp</td>
+                </tr>
+                <tr>
+                    <td id=\"minus\">-</td>
+                </tr>
+            </table>
         </div>\n";
         }
 
@@ -56,6 +59,6 @@
                 
         </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
