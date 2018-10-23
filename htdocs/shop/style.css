@@ -38,24 +38,37 @@ h1 {
     padding: 10px;
 }
 
-#antalvaror {
+#antalVaror {
+    width: 25px;
+    height: 25px;
+    text-align: center;
     background-color: green;
-    width: 50px;
-    border-radius: 100%;
+    border: none;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 14px;
 }
 
-#korglook {
-    font-family: sans-serif;
-    width: 200px;
-    border: 1px solid #CCC;
+#total {
+    width: 100px;
+    display: inline-block;
     text-align: right;
-    padding: 15px;
+    border: none;
+    padding: 5px;
     border-radius: 5px;
     background: #FFF;
 }
 
-#korgen {
-    
+#kassan {
+    height: 30px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+#korg {
+    text-align: right;
 }
 
 main {

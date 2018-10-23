@@ -18,10 +18,12 @@
     <div class="kontainer">
         <header>
             <h1>Alla varor</h1>
-            <div id="korglook">
-                <span id="antalVaror">0</span>
-                <span id="korgen">0</span> kr
-            </div>
+            <form id="korg" method="post" action="kassa.php">
+                <input id="antalVaror" type="text" value="0" name="antalVaror">
+                <input id="total" type="text" value="0 kr" name="total">
+                <input id="korgen" type="hidden" name="korgen">
+                <button id="kassan">Kassan</button>
+            </form>
         </header>
         <main>
         <?php
@@ -37,7 +39,7 @@
         echo "
         <div class=\"vara\">\n
         <img src=\"./varor/$delar[2]\" alt=\"$delar[0]\">\n
-        <p>$delar[0]</p>\n
+        <p id=\"beskrivning\">$delar[0]</p>\n
         <p>Styckpris: <span id=\"pris\">$delar[1]</span> kr</p>\n
         <p>Summa: <span id=\"summa\">$delar[1]</span> kr</p>\n
             <table>
@@ -56,7 +58,7 @@
         ?>
         </main>
         <footer>
-                
+            André Englund 2018
         </footer>
     </div>
     <script src="script2.js"></script>
