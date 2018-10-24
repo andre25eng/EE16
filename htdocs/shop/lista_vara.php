@@ -12,10 +12,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="kontainer">
+    <div class="kontainer listaVara">
         <header>
             <h1>Alla varor</h1>
             <form id="korg" method="post" action="kassa.php">
@@ -23,6 +24,7 @@
                 <input id="total" type="text" value="0 kr" name="total">
                 <input id="korgen" type="hidden" name="korgen">
                 <button id="kassan">Kassan</button>
+                <button type="reset"><i class="fas fa-times"></i></button>
             </form>
         </header>
         <main>
@@ -42,7 +44,7 @@
         <p id=\"beskrivning\">$delar[0]</p>\n
         <p>Styckpris: <span id=\"pris\">$delar[1]</span> kr</p>\n
         <p>Summa: <span id=\"summa\">$delar[1]</span> kr</p>\n
-            <table>
+            <table class=\"kontroll\">
                 <tr>
                     <td id=\"antal\" rowspan=\"2\">1</td>
                     <td id=\"plus\">+</td>

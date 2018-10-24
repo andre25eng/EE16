@@ -74,7 +74,7 @@ function start() {
             
             /* Spara undan korgen i den dålda inputen */
             data.push({
-                "beskrivning": beskrivning, "antal": antal, "summa": summa
+                "beskrivning": beskrivning, "antal": antal, "summa": summa, "pris": pris
             });
             console.log(JSON.stringify(data));
 

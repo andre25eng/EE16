@@ -12,10 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Filluppladning</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.0/dist/mini-default.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="kontainer nyVara">
+        <header>
+            <h1>Ny Vara</h1>
+        </header>
+        <main>
 <?php
     /* Bäkrefta att knappen var klickad */
     if (isset($_POST["submit"])) {
@@ -89,5 +93,10 @@
         <label>Produkt Bild</label><input type="file" name="filen"><br>
         <button type="submit" name="submit">Ladda upp vara!</button>
     </form>
+        </main>
+        <footer>
+            André Englund 2018
+        </footer>
+    </div>
 </body>
 </html>
