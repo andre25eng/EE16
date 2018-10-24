@@ -7,6 +7,23 @@ function start() {
     var data = [];
     const elementAntalVaror = document.querySelector("#antalVaror");
     const elementTotal = document.querySelector("#total");
+    const elementKassan = document.querySelector("#kassan");
+    const elementTom = document.querySelector("#tom");
+
+    /* Nollställ korgen */
+    elementAntalVaror.value = 0;
+    elementTotal.value = 0;
+    elementKassan.value = "";
+
+    /* Lyssan på klick på resetknappen */
+    elementTom.addEventListener("click", tom);
+
+    /* Töm korgen */
+
+    function tom() {
+        elementKassan.disabled = true;
+        data = [];
+    }
 
     /* Lyssna på klick på hela sidan */
     const elementKontainer = document.querySelector(".kontainer");
@@ -66,6 +83,8 @@ function start() {
         /* Om man klickar #kop */
         if (cell.id === "kop") {
             
+            elementKassan.disabled = false;
+
             /* Retturera summan */
             total = total + summa;
             antalVaror = antalVaror + antal;

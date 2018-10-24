@@ -20,11 +20,11 @@
         <header>
             <h1>Alla varor</h1>
             <form id="korg" method="post" action="kassa.php">
-                <input id="antalVaror" type="text" value="0" name="antalVaror">
-                <input id="total" type="text" value="0 kr" name="total">
-                <input id="korgen" type="hidden" name="korgen">
-                <button id="kassan">Kassan</button>
-                <button type="reset"><i class="fas fa-times"></i></button>
+                <input id="antalVaror" type="text" value="0" name="antalVaror" readonly>
+                <input id="total" type="text" value="0 kr" name="total" readonly>
+                <input id="korgen" type="hidden" name="korgen" readonly>
+                <button id="kassan" disabled>Kassan</button>
+                <button id="tom" type="reset"><i class="fas fa-times"></i></button>
             </form>
         </header>
         <main>
@@ -48,7 +48,7 @@
                 <tr>
                     <td id=\"antal\" rowspan=\"2\">1</td>
                     <td id=\"plus\">+</td>
-                    <td id=\"kop\" rowspan=\"2\">köp</td>
+                    <td id=\"kop\" onclick=\"\" rowspan=\"2\">köp</td>
                 </tr>
                 <tr>
                     <td id=\"minus\">-</td>

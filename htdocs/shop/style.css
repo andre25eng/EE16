@@ -102,6 +102,11 @@ footer {
     font-weight: bold;
     color: red;
 }
+
+.listaVara #kassan:disabled {
+    background-color: rgb(129, 145, 129);
+}
+
 .listaVara table {
     width: 100%;
     background: #EEE;
