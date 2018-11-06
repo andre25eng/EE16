@@ -18,7 +18,13 @@
 <body>
     <div class="kontainer listaVara">
         <header>
-            <h1>Alla varor</h1>
+            <h1>Butik</h1>
+            <nav>
+                <a href="ny_vara.php">Ny Vara</a>
+                <a href="login.php">Logga In</a>
+                <a href="lista_vara.php">Handla</a>
+            </nav>
+            <h2>Alla Varor</h2>
             <form id="korg" method="post" action="kassa.php">
                 <input id="antalVaror" type="text" value="0" name="antalVaror" readonly>
                 <input id="total" type="text" value="0 kr" name="total" readonly>

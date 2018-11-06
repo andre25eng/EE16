@@ -27,10 +27,36 @@ body {
 }
 header {
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: #DDD;
 }
 h1 {
     font-size: 25px;
 }
+
+h2 {
+
+}
+
+nav {
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+nav a {
+    background-color: green;
+    color: #FFF;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: darkgreen;
+}
+
 label {
     width: 150px;
     display: inline-block;
@@ -138,6 +164,12 @@ footer {
 }
 
 /* Style för ny_vara.php */
+.nyVara header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
 .nyVara .valjFil {
     border: 1px solid #CCC;
     display: inline-block;

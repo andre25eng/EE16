@@ -12,12 +12,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Filluppladning</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer nyVara">
         <header>
-            <h1>Ny Vara</h1>
+        <h1>Ny Vara</h1>
+            <nav>
+                <a href="ny_vara.php">Ny Vara</a>
+                <a href="login.php">Logga In</a>
+                <a href="lista_vara.php">Handla</a>
+            </nav>
         </header>
         <main>
 <?php
@@ -90,7 +96,8 @@
     <form action="#" method="POST" enctype="multipart/form-data">
         <label>Varans Namn</label><input type="text" name="varbes"><br>
         <label>Pris</label><input type="text" name="pris"><br>
-        <label>Produkt Bild</label><input type="file" name="filen"><br>
+        <label>Produkt Bild</label><input type="file" name="filen">
+        <label class="valjFill" for="laddaUpp"><i class="fas fa-file-upload"></i>Välj Bild<input id="laddaUpp" type="file" name="filen"></label><br>
         <button type="submit" name="submit">Ladda upp vara!</button>
     </form>
         </main>
