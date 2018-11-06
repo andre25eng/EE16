@@ -6,6 +6,15 @@
 * @license    PHP CC
 */
 ?>
+<?php 
+session_start();
+if (!isset($_SESSION["anamn"])) {
+    header("Location: login.php");
+    exit;
+} else {
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -21,7 +30,13 @@
         <h1>Ny Vara</h1>
             <nav>
                 <a href="ny_vara.php">Ny Vara</a>
-                <a href="login.php">Logga In</a>
+                <?php
+                if (!isset($_SESSION["anamn"])) {
+                echo "<a href=\"login.php\">Logga In</a>";
+                } else {
+                echo "<a href=\"logout.php\">Logga Ut</a>";
+                }
+                ?>
                 <a href="lista_vara.php">Handla</a>
             </nav>
         </header>

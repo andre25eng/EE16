@@ -1,18 +1,36 @@
+<?php
+/*
+* PHP version 7
+* @category   Webbshop
+* @author     André Englund
+* @license    PHP CC
+*/
+?>
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inloggning</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer nyVara">
         <header>
         <h1>Inloggning</h1>
-            <nav>
+        <nav>
                 <a href="ny_vara.php">Ny Vara</a>
-                <a href="login.php">Logga In</a>
+                <?php
+                if (!isset($_SESSION["anamn"])) {
+                echo "<a href=\"login.php\">Logga In</a>";
+                } else {
+                echo "<a href=\"logout.php\">Logga Ut</a>";
+                }
+                ?>
                 <a href="lista_vara.php">Handla</a>
             </nav>
         </header>
@@ -21,8 +39,10 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
 
-        if  ($username == 'Dre' && $password == 'isdre') {
-            echo "<p>Were in bois!</p>";
+        if  ($username == 'dre' && $password == 'isdre') {
+            $_SESSION["anamn"] = "dre";
+            header("Location: ny_vara.php");
+            exit;
         } else {
             echo "<p>Wrong Password or Username.</p>";
         }
