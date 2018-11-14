@@ -42,11 +42,14 @@ if (!isset($_SESSION["anamn"])) {
         </header>
         <main>
 <?php
-    /* Bäkrefta att knappen var klickad */
-    if (isset($_POST["submit"])) {
-        $filen = $_FILES["filen"];
-        $varbes = $_POST["varbes"];
-        $pris = $_POST["pris"];
+/* Bäkrefta att knappen var klickad */
+if (isset($_POST["submit"])) {
+
+    $filen = $_FILES["filen"];
+    $varbes = filter_input(INPUT_POST, "varbes", FILTER_SANITIZE_STRING);
+    $pris = filter_input(INPUT_POST, "pris", FILTER_SANITIZE_STRING);
+
+    if($filen && $varbes && $pris) {
 
         /* Plock filnamnet */
         $fileName = $filen["name"];
@@ -107,6 +110,9 @@ if (!isset($_SESSION["anamn"])) {
         fwrite($handtag, $varbes . '¤' . $pris . '¤' . $fileNewName . PHP_EOL);
         fclose($handtag);
     }
+} else {
+    echo "<p>Fyll i alla rutor</p>";
+}
 ?>
     <form action="#" method="POST" enctype="multipart/form-data">
         <label>Varans Namn</label><input type="text" name="varbes"><br>

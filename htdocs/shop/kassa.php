@@ -25,14 +25,13 @@ session_start();
         </header>
         <main>
 <?php
+/* Ta emot data */
+$antalVaror = filter_input(INPUT_POST, "antalVaror", FILTER_SANITIZE_NUMBER_INT;
+$total = filter_input(INPUT_POST, "total", FILTER_SANITIZE_NUMBER_INT);
+$korgen = filter_input(INPUT_POST, "korgen", FILTER_SANITIZE_);
 
 /* Kontrollera att data finns */
 if (isset($_POST["antalVaror"]) && isset($_POST["total"]) && isset($_POST["korgen"])) {
-
-    /* Ta emot data */
-    $antalVaror = $_POST["antalVaror"];
-    $total = $_POST["total"];
-    $korgen = $_POST["korgen"];
 
     $varor = json_decode($korgen);
     echo "<table>";

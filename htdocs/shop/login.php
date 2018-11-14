@@ -35,9 +35,11 @@ session_start();
             </nav>
         </header>
         <?php
-        if (isset($_POST["username"])&& isset($_POST["password"])) {
-        $username = $_POST["username"];
-        $password = $_POST["password"];
+
+        $username = filter_input(INPUT_POST, "anamn", FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
+
+        if ($username && $password) {
 
         if  ($username == 'dre' && $password == 'isdre') {
             $_SESSION["anamn"] = "dre";

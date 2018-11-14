@@ -32,8 +32,11 @@ $txt = filter_input(INPUT_POST, "meddelande", FILTER_SANITIZE_STRING);
 if ($to && $subject && $txt) {
 
     /* Skicka mail */
-    mail($to,$subject,$txt);
     echo "<p>Mailet har skicakats till $to</p>";
+    echo "<p>Rubriken är $subject</p>";
+    echo "<p>Medelandet är $txt</p>";
+} else {
+    echo "<p>Fyll in alla fält</p>";
 }
 ?>
 
