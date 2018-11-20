@@ -26,12 +26,12 @@ session_start();
         <main>
 <?php
 /* Ta emot data */
-$antalVaror = filter_input(INPUT_POST, "antalVaror", FILTER_SANITIZE_NUMBER_INT;
+$antalVaror = filter_input(INPUT_POST, "antalVaror", FILTER_SANITIZE_NUMBER_INT);
 $total = filter_input(INPUT_POST, "total", FILTER_SANITIZE_NUMBER_INT);
-$korgen = filter_input(INPUT_POST, "korgen", FILTER_SANITIZE_);
+$korgen = json_decode($_POST(["korgen"]));
 
 /* Kontrollera att data finns */
-if (isset($_POST["antalVaror"]) && isset($_POST["total"]) && isset($_POST["korgen"])) {
+if ($antalVaror && $total && $korgen) {
 
     $varor = json_decode($korgen);
     echo "<table>";
@@ -42,11 +42,17 @@ if (isset($_POST["antalVaror"]) && isset($_POST["total"]) && isset($_POST["korge
             <th>Summa</th>
           </tr>";
     foreach ($varor as $vara) {
+        
+        $beskrivning = filter_var($vara->beskrivning, FILTER_SANITIZE_STRING);
+        $antal = filter_var($vara->antal, FILTER_SANITIZE_NUMBER_INT);
+        $pris = filter_var($vara->pris, FILTER_SANITIZE_NUMBER_INT);
+        $summa = filter_var($vara->summa, FILTER_SANITIZE_NUMBER_INT);
+
         echo "<tr>";
-        echo "<td>$vara->beskrivning</td>";
-        echo "<td>$vara->antal st</td>";
-        echo "<td>$vara->pris kr</td>";
-        echo "<td>$vara->summa kr</td>";
+        echo "<td>$beskrivning</td>";
+        echo "<td>$antal st</td>";
+        echo "<td>$pris kr</td>";
+        echo "<td>$summa kr</td>";
         echo "</tr>";
     }
     echo "</table>";
