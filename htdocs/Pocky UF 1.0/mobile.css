@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Sintony');
+
+/* font-family: 'Sintony', sans-serif; */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sintony', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+}
+
+header {
+    background-color: rgba(230, 0, 18, 0.8);
+    position: fixed;
+}
+
+header p {
+    text-align: center;
+}
+
+header img {
+    width: 45%;
+}
+
+.maindiv {
+    background-color: rgba(235,235,235,1);
+    padding: 40px;
+}
+
+main {
+    
+}
+
+main div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#dash {
+    margin-top: 260px;
+}
+
+main .h {
+    text-align: center;
+    font-size: 70px;
+    color: rgba(230, 0, 18, 1);
+    padding: 20px;
+}
+
+main img {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+main p {
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    background-color: rgba(230, 0, 18, 0.8);
+    padding: 40px;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+    font-size: 35px;
+}
+
+footer p {
+    color: white;
+    font-size: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+
+

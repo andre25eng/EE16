@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Sintony');
+
+/* font-family: 'Sintony', sans-serif; */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sintony', sans-serif;
+}
+
+body {
+    width: 67%;
+    margin: auto;
+    min-width: 600px;
+    background: url(Pictures/background.jpg) fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 70px #000;
+}
+
+header {
+    background-color: rgba(230, 0, 18, 0.9);
+    position: fixed;
+    width: 67%;
+    min-width: 600px;
+}
+
+.hdiv {
+    display: flex;
+    margin: auto;
+}
+
+header img {
+    width: 100%;
+    float: left;
+    padding: 5px;
+}
+
+nav {
+    margin: auto;
+    text-align: center;
+}
+
+ul {
+    
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+.curent {
+    text-decoration: underline;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+.flex1 {
+    width: 20%;
+    padding: 20px;
+}
+
+.flex2 {
+    width: 60%;
+    padding: 20px;
+}
+
+#kassaButtonKontainer {
+    margin: auto;
+    margin-top: 17%;
+    text-align: center;
+}
+
+#kassaButton {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+#kassaButton:hover {
+    text-decoration: underline;
+}
+
+.maindiv {
+    background-color: rgba(255,255,255,0.8);
+    padding: 40px;
+}
+
+main {
+    padding-top: 110px;
+}
+
+main div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+main .h {
+    text-align: center;
+    font-size: 30px;
+    color: rgba(230, 0, 18, 1);
+    padding: 20px;
+}
+
+main img {
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+}
+
+main p {
+    text-align: center;
+    font-size: 20px;
+}
+
+footer {
+    background-color: rgba(230, 0, 18, 0.9);
+    padding: 40px;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    border-bottom: 1px solid white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
