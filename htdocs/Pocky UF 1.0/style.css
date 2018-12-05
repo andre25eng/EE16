@@ -135,6 +135,39 @@ main p {
     font-size: 20px;
 }
 
+.kontroll {
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table, th, td {
+    border: 1px solid #CCC;
+}
+
+td {
+    padding: 0px 7px;
+}
+
+table #antal, table #plus {
+    width: 25%;
+}
+
+table #kop {
+    background: red;
+    color: #FFF;
+    width: 50%;
+}
+
+table #kop:hover {
+    background: darkred;
+}
+
+table #plus:hover, table #minus:hover {
+    background: #BBB;
+}
+
 footer {
     background-color: rgba(230, 0, 18, 0.9);
     padding: 40px;

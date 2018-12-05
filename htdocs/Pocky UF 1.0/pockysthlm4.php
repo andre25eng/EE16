@@ -45,8 +45,29 @@ session_start();
                 <h1 class="h">Vilka Pocky smaker har vi?</h1>
                 <p>Chocolate</p>
                 <p><img src="Pack\Chocolate.png" alt="Chocolate Pocky" class="Pockypic"></p>
+                <table class="kontroll">
+                    <tr>
+                        <td id="antal" rowspan="2">1</td>
+                        <td id="plus">+</td>
+                        <td id="kop" onclick="" rowspan="2">köp</td>
+                    </tr>
+                    <tr>
+                        <td id="minus">-</td>
+                    </tr>
+                </table>
+
                 <p>Strawberry</p>
                 <p><img src="Pack\Pocky_Strawberry.png" alt="Jordgubbs Pocky" class="Pockypic"></p>
+                <table class="kontroll">
+                    <tr>
+                        <td id="antal" rowspan="2">1</td>
+                        <td id="plus">+</td>
+                        <td id="kop" onclick="" rowspan="2">köp</td>
+                    </tr>
+                    <tr>
+                        <td id="minus">-</td>
+                    </tr>
+                </table>
             </div>     
         </main>
     </div>
