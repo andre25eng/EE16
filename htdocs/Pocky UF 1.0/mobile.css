@@ -31,7 +31,7 @@ header p {
 }
 
 header img {
-    width: 45%;
+    width: 30%;
 }
 
 .maindiv {
@@ -71,6 +71,10 @@ main img {
 main p {
     text-align: center;
     font-size: 30px;
+}
+
+.p1 {
+    text-align: left;
 }
 
 footer {

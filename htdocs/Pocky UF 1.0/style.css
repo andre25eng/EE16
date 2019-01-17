@@ -135,6 +135,10 @@ main p {
     font-size: 20px;
 }
 
+.p1 {
+    text-align: left;
+}
+
 .kontroll {
     text-align: center;
     vertical-align: middle;

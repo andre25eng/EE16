@@ -23,15 +23,7 @@ body {
  border-radius: 5px;
 }
 
-form {
-
-}
-
-label {
-
-}
-
-#namn, #chatt, #meddelande {
+#namn, #losen, #chatt, #meddelande {
     width: 100%;
     border-radius: 5px;
     border: 1px solid black;
