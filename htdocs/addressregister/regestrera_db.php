@@ -26,10 +26,16 @@ include_once("../../admin/konfig_db.php");
                 echo "<p>anslutningen lyckades!</p>";
             }
             /* Lagra data i tabellen */
-            $sql = "INSERT INTO personer (fnamn, enamn, epost) VALUES ('$fnamn', 'enamn', '$epost');";
-            echo "<p>$sql</p>";
-            $conn->query($sql);
+            $sql = "INSERT INTO personer (fnamn, enamn, epost) VALUES ('$fnamn', '$enamn', '$epost');";
+            $result = $conn->query($sql);
             /* Stänger ner anslutningen */
+
+            if (!$result) {
+                die("Något gick fel med sql satsen.");
+            } else {
+                echo "<p>Personen är registrerad</p>";
+            }
+            
         }
     ?>
     <div class="kontainer">

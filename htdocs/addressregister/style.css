@@ -60,3 +60,17 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background: #FFF
 }
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(110, 108, 108);
+}
+
+
+
+
+
+
