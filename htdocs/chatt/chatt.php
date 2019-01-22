@@ -13,7 +13,7 @@
         if (isset($_POST["losen"])) {
             $losen = filter_input(INPUT_POST, "losen", FILTER_SANITIZE_STRING);
 
-            if ($losen == "123") {
+            if ($losen == "1235") {
                 if (isset($_POST["namn"]) && isset($_POST["meddelande"])) {
                     $namn = filter_input(INPUT_POST, "namn", FILTER_SANITIZE_STRING);
                     $meddelande = filter_input(INPUT_POST, "meddelande", FILTER_SANITIZE_STRING);
@@ -25,7 +25,7 @@
                     fclose($handtag);
             }
         } else {
-            echo "<script>alert(\"Fel lösenor!\");
+            echo "<script>alert(\"Fel lösenord!\");
             </script>";
         }
     }    

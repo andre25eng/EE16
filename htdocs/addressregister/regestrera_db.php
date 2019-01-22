@@ -1,7 +1,8 @@
 <?php
 include_once("../../admin/konfig_db.php");
-?>
 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -23,7 +24,7 @@ include_once("../../admin/konfig_db.php");
             if ($conn->connect_error) {
                 die("Kunde inte ansluta till databsen: " . $conn->connect_error);
             } else {
-                echo "<p>anslutningen lyckades!</p>";
+                /* echo "<p>anslutningen lyckades!</p>"; */
             }
             /* Lagra data i tabellen */
             $sql = "INSERT INTO personer (fnamn, enamn, epost) VALUES ('$fnamn', '$enamn', '$epost');";
@@ -33,12 +34,17 @@ include_once("../../admin/konfig_db.php");
             if (!$result) {
                 die("Något gick fel med sql satsen.");
             } else {
-                echo "<p>Personen är registrerad</p>";
+                /* echo "<p>Personen är registrerad</p>"; */
             }
             
         }
     ?>
     <div class="kontainer">
+        <nav>
+            <a href="logga_in_db.php">Logga in</a>
+            <a href="regestrera_db.php">Registrera</a>
+            <a href="lista_db.php">Lista</a>
+        </nav>
         <h3>Registrera address</h3>
         <form action="#" method="post"> 
             <input type="text" name="fnamn" id="fnamn" placeholder="Ditt förnamn"><br>

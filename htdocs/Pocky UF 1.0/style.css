@@ -130,6 +130,10 @@ main img {
     padding: 10px;
 }
 
+#flerapockys {
+    width: 100%;
+}
+
 main p {
     text-align: center;
     font-size: 20px;
