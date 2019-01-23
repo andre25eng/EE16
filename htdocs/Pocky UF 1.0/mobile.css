@@ -34,6 +34,72 @@ header img {
     width: 30%;
 }
 
+.hdiv {
+    display: flex;
+    margin: auto;
+}
+
+header img {
+    width: 100%;
+    float: left;
+    padding: 5px;
+}
+
+nav {
+    margin: auto;
+    text-align: center;
+}
+
+ul {
+    
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+.curent {
+    text-decoration: underline;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+.flex1 {
+    width: 20%;
+    padding: 20px;
+}
+
+.flex2 {
+    width: 60%;
+    padding: 20px;
+}
+
+#kassaButtonKontainer {
+    margin: auto;
+    margin-top: 17%;
+    text-align: center;
+}
+
+#kassaButton {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+#kassaButton:hover {
+    text-decoration: underline;
+}
+
 .maindiv {
     background-color: rgba(235,235,235,1);
     padding: 40px;
@@ -52,7 +118,7 @@ main div {
 }
 
 #dash {
-    margin-top: 260px;
+    margin-top: 150px;
 }
 
 main .h {
@@ -68,6 +134,10 @@ main img {
     padding: 20px;
 }
 
+#flerapockys {
+    width: 100%;
+}
+
 main p {
     text-align: center;
     font-size: 30px;
@@ -75,6 +145,46 @@ main p {
 
 .p1 {
     text-align: left;
+}
+
+.kontroll {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+table, th, td {
+    border: 1px solid #CCC;
+}
+
+td {
+    padding: 0px 7px;
+}
+
+table #antal{
+    width: 34%;
+}
+
+table #plus {
+    width: 33%;
+}
+
+table #kop {
+    background: red;
+    color: #FFF;
+    width: 33%;
+}
+
+table #kop:hover {
+    background: darkred;
+}
+
+table #plus:hover, table #minus:hover {
+    background: #BBB;
 }
 
 footer {

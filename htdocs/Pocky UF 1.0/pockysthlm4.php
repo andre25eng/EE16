@@ -35,13 +35,14 @@ session_start();
     </header>
     <div class="maindiv">
         <main>
-            <div>
+<!--        <div>
                 <h1 class="h">Tillgänglighet</h1>
                 <p>Nästa köpes tillfälle: Obekräftat</p>
                 <p>Status: Inväntar Leverans</p>
                 <p><img src="Pictures/out-of-stock.png" alt="Out of stock"></p>
-            </div> 
-            <div>
+            </div>
+-->
+            <div id="dash">
                 <h1 class="h">Vilka Pocky smaker har vi?</h1>
                 <p>Chocolate</p>
                 <p><img src="Pack\Chocolate.png" alt="Chocolate Pocky" class="Pockypic"></p>
@@ -54,8 +55,8 @@ session_start();
                     <tr>
                         <td id="minus">-</td>
                     </tr>
-                </table>
-
+                </table><br>
+            
                 <p>Strawberry</p>
                 <p><img src="Pack\Pocky_Strawberry.png" alt="Jordgubbs Pocky" class="Pockypic"></p>
                 <table class="kontroll">
@@ -75,5 +76,6 @@ session_start();
         <h2>Kontakta oss</h2>
         <p><a href="mailto:pocky4sthlm@gmail.com" target="_top">pocky4sthlm@gmail.com</a></p>
     </footer>
+    <script src="script2.js"></script>
 </body>
 </html>
