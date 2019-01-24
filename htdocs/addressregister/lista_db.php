@@ -48,7 +48,7 @@ session_start();
             echo "<td>{$rad['enamn']}</td>";
             echo "<td>{$rad['epost']}</td>";
             echo "<td><a href=\"radera_verifiera_db.php?id={$rad['id']}\">Radera</a></td>";
-            echo "<td><a href=\"redigera_db.php\">Redigera  </a></td>";
+            echo "<td><a href=\"redigera_db.php?id={$rad['id']}\">Redigera  </a></td>";
             echo "</tr>";
         }
         echo "</table>";
