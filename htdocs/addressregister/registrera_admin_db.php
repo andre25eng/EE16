@@ -32,18 +32,15 @@ session_start();
                     /* echo "<p>anslutningen lyckades!</p>"; */
                 }          
                 
-                $sql = "SELECT * FROM admin WHERE anamn = '$anamn';";
+                $hash = password_hash($losen, PASSWORD_DEFAULT);
+
+                $sql = "INSERT INTO admin (anamn, hash) VALUES ('$anamn', '$hash');";
                 $result = $conn->query($sql);
                 
                 if (!$result) {
                     die("Något gick fel med sql satsen.");
                 } else {
-                    $rad = $result->fetch_assoc();
-                    if (password_verify($losen, $rad['hash'])) {
-                        echo "Ditt lösenord stämmer!";
-                    } else {
-                        echo "Fel lösenord!";
-                    }
+                    echo "<p>Admnin registrerad</p>";
                 }
             $conn->close();
             }
