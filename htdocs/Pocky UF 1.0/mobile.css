@@ -158,33 +158,31 @@ main p {
 }
 
 table, th, td {
-    border: 1px solid #CCC;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: auto;
 }
 
-td {
-    padding: 0px 7px;
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+
+#antalC, #antalS {
+    width: 20%;
+    height: 80px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 50px;
 }
 
-table #antal{
-    width: 34%;
-}
-
-table #plus {
-    width: 33%;
-}
-
-table #kop {
-    background: red;
-    color: #FFF;
-    width: 33%;
-}
-
-table #kop:hover {
-    background: darkred;
-}
-
-table #plus:hover, table #minus:hover {
-    background: #BBB;
+#bestall {
+    background-color: rgba(230, 0, 18, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 45px;
 }
 
 footer {

@@ -1,0 +1,60 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: darkgray;
+}
+
+.kontainer {
+    background-color: lightblue;
+    width: 500px;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input, #urklipp {
+    border-radius: 3px;
+    border: none;
+    padding: 4px;
+    margin: 5px;
+    width: 50%;
+}
+
+#urklipp {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background: #CCC
+}
+tr:nth-child(odd) {
+    background: #FFF
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(110, 108, 108);
+}

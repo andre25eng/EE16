@@ -152,29 +152,21 @@ main p {
 }
 
 table, th, td {
-    border: 1px solid #CCC;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: auto;
 }
 
-td {
-    padding: 0px 7px;
-}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+  }
 
-table #antal, table #plus {
-    width: 25%;
-}
-
-table #kop {
-    background: red;
-    color: #FFF;
-    width: 50%;
-}
-
-table #kop:hover {
-    background: darkred;
-}
-
-table #plus:hover, table #minus:hover {
-    background: #BBB;
+#antalC, #antalS {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 footer {

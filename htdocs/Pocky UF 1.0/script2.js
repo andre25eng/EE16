@@ -26,12 +26,12 @@ function start() {
     }
 
     /* Lyssna på klick på hela sidan */
-    const elementKontainer = document.querySelector(".kontainer");
+    const elementKontainer = document.querySelector(".maindiv");
     elementKontainer.addEventListener("click", klick);
 
     /* Vad händer när man klickat på sidan? */
     function klick(e) {
-        console.log("Nu har vi en klick event på " + e.target.nodeName);
+        console.log("Nu har vi ett klick event på " + e.target.nodeName);
         /* Vad man klickat på */
         if (e.target.nodeName === "TD") {
             rakna(e.target);
@@ -43,13 +43,11 @@ function start() {
         console.log("Klick i en cell");
 
         const foralder = cell.parentNode.parentNode.parentNode.parentNode;
-        const elementBeskrivning = foralder.querySelector("#beskrivning")
         const elementAntal = foralder.querySelector("#antal");
         const elementSumma = foralder.querySelector("#summa");
         const elementPris = foralder.querySelector("#pris");
         const elementKorgen = document.querySelector("#korgen");
 
-        var beskrivning = elementBeskrivning.textContent;
         var antal = parseInt(elementAntal.textContent);
         var pris = parseInt(elementPris.textContent);
         var summa = parseInt(elementSumma.textContent);
@@ -93,7 +91,7 @@ function start() {
             
             /* Spara undan korgen i den dålda inputen */
             data.push({
-                "beskrivning": beskrivning, "antal": antal, "summa": summa, "pris": pris
+                "antal": antal, "summa": summa, "pris": pris
             });
             console.log(JSON.stringify(data));
 
