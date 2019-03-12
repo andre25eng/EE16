@@ -5,7 +5,7 @@ function start() {
     var ctx = canvas.getContext("2d");
 
     var keys = [];
-    var raket = { x: 0, y: 0 };
+    var raket = { x: 0, y: 0, v: 0, h: 0 };
 
     var imgRaket = new Image();
     imgRaket.src = "raket.png";
@@ -15,9 +15,19 @@ function start() {
         raket.y = 500;
     }
     
+    function rad(v) {
+        return v / 180 * Math.PI;
+    }
+
     function ritaRaket() {
-        ctx.beginPath();
-        ctx.drawImage(imgRaket, raket.x, raket.y, 50, 50);
+        raket.x = raket.h * Math.cos(raket.v);
+        raket.y = raket.h * Math.cos(raket.v);
+        raket.v = 0;
+        raket.h = 0;
+
+        ctx.translate(raket.x, raket.y);
+        ctx.rotate(rad(raket.v));
+        ctx.drawImage(imgRaket, 0 - 25, 0 -25, 50, 50);
         ctx.closePath();
     }
 
@@ -33,28 +43,25 @@ function start() {
 
     function uppdateraRaket() {
         if (keys["ArrowLeft"]) {
-            raket.x -= 10;
+            raket.v -= 1;
         }
         if (keys["ArrowRight"]) {
-            raket.x += 10;
+            raket.v += 1;
         }
         if (keys["ArrowUp"]) {
-            raket.y -= 10;
-        }
-        if (keys["ArrowDown"]) {
-            raket.y += 10;
+            raket.h += 1;
         }
 
-        if (raket.x == 0) {
+        if (raket.x < 0) {
             raket.x = 800;
         }
-        if (raket.x == 800) {
+        if (raket.x > 800) {
             raket.x = 0;
         }
-        if (raket.y == 0) {
+        if (raket.y < 0) {
             raket.y = 600;
         }
-        if (raket.y == 700) {
+        if (raket.y > 600) {
             raket.y = 0;
         }
     }
