@@ -8,10 +8,6 @@ function start() {
         center: [18.06, 59.33], // starting position [lng, lat]
         zoom: 11 // starting zoom
     });
-
-    let marker1 = new mapboxgl.Marker({ draggable: true })
-        .setLngLat([18.06, 59.33])
-        .addTo(map);
     
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showLocatin);
@@ -20,8 +16,35 @@ function start() {
     }
 
     function showLocatin(position) {
-        var lat = position.coords.latidude;
-        var lot = position.coords.longitdude;
-        alert("Din position är: " + lat + ", " + lon)
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+        console.log("Din position är: " + lat + ", " + lon);
+
+        lat = "59.335393";
+        lon = "18.058185";
+
+        var postData = new FormData();
+        postData.append("lat", lat);
+        postData.append("lon", lon);
+
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "sl.php", true);
+        ajax.send(postData);
+
+        ajax.addEventListener("loadend", fetchStops);
+        function fetchStops() {
+            var stopsJson = this.responseText;
+            console.log(stopsJson);
+
+            var stops = JSON.parse(stopsJson);
+
+            stops.forEach(stop => {
+                console.log("Hållplats: ", stop[0], stop[1], stop[2]);
+
+                let marker = new mapboxgl.Marker()
+                .setLngLat([stop[1], stop[2]])
+                .addTo(map);
+            });
+        }
     }
 }
