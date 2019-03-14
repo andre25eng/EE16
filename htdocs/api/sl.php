@@ -5,7 +5,7 @@
 
         $api = "5a04359da47042b7837f88a5c61908c9";
         $radius = "750";
-        $max = "10";
+        $max = "100";
         $url = "http://api.sl.se/api2/nearbystops.json?key=$api&originCoordLat=$lat&originCoordLong=$lon&maxresults=$max&radius=$radius";
 
         $json = file_get_contents($url);
